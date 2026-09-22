@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#dff0ff" />
+  <title>Quiz de Libras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="page-shell">
+    <a href="{{ url_for('home') }}" class="btn btn-secondary" style="display: inline-block; text-decoration: none; margin-bottom: 20px;">← Voltar ao início</a>
+    <header class="hero">
+      <div class="eyebrow">🤟 Reconhecimento de Libras com IA</div>
+      <h1>Quiz de <span>Libras</span></h1>
+      <p>Reconhecimento de sinais em Libras por inteligência artificial.</p>
+    </header>
+
+    <section class="workspace" aria-label="Quiz de Libras">
+      <article class="panel image-panel">
+        <div class="panel-head">
+          <div>
+            <span class="kicker">Entrada</span>
+            <h2>Imagens</h2>
+          </div>
+          <span id="selectionStatus" class="status-pill">Pronto</span>
+        </div>
+
+        <div class="selected-preview">
+          <img id="selectedImagePreview" alt="Imagem selecionada" hidden />
+        </div>
+
+        <div id="sampleGrid" class="sample-grid" aria-live="polite"></div>
+
+
+
+      </article>
+
+      <article class="panel result-panel">
+        <div class="panel-head"><h2>Qual ? a letra?</h2></div>
+        <form id="answerForm" class="translation-box">
+          <label for="letterGuess">Sua resposta</label>
+          <input id="letterGuess" class="letter-guess" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" required disabled />
+          <div class="translation-actions">
+            <button id="checkAnswer" class="btn btn-primary" type="submit" disabled>Conferir resposta</button>
+          </div>
+        </form>
+        <div id="message" class="message info" role="status" aria-live="polite" hidden></div>
+      </article>
+    </section>
+
+  </main>
+
+  <audio id="wrongAnswerAudio" src="{{ url_for('quiz_audio', filename='faustao-errou.mp3') }}" preload="auto"></audio>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

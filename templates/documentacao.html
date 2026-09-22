@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça o Quiz Libras: objetivos, inteligência artificial, arquitetura e funcionamento do projeto.">
+  <title>Sobre o projeto | Quiz Libras</title>
+  <!-- Página independente: CSS e JavaScript incluídos, sem bibliotecas externas.
+       Integração: salve em templates/documentacao.html e adicione no app.py,
+       depois da criação do app e antes de app.run():
+
+       @app.route('/documentacao')
+       def documentacao():
+           return render_template('documentacao.html')
+
+       Garanta que render_template esteja importado de flask.
+       Na página atual, adicione: <a href="/documentacao">Sobre o projeto</a>
+       O botão de retorno abaixo assume que a página inicial está em /.
+       Conteúdo baseado na estrutura informada pelo autor; validar com o código.
+  -->
+  <style>
+    :root{--bg:#f5f6fa;--paper:#fff;--ink:#19213a;--muted:#58647b;--accent:#5145cd;--line:#e1e5ef;--soft:#eeecff;--radius:20px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}a{color:var(--accent);text-underline-offset:4px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #c96c0d;outline-offset:5px}.skip{position:absolute;left:12px;top:-90px;background:white;padding:12px;z-index:5}.skip:focus{top:10px}.topbar{background:#ffffffed;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:3;backdrop-filter:blur(14px)}.topbar-inner{max-width:1180px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:18px;letter-spacing:-.4px}.mark{display:grid;place-items:center;background:var(--accent);color:white;border-radius:12px;width:40px;height:40px;font-size:15px;letter-spacing:0}.back{font-size:14px;font-weight:650;text-decoration:none}.layout{max-width:1180px;margin:auto;padding:42px 28px 64px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:46px}.sidebar{align-self:start;position:sticky;top:108px}.nav-label,.eyebrow{text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:1.7px;color:var(--muted)}.sidebar nav{display:grid;gap:5px;margin-top:15px}.sidebar a{font-size:14px;color:var(--muted);text-decoration:none;padding:9px 12px;border-radius:9px;border-left:3px solid transparent}.sidebar a:hover,.sidebar a[aria-current="location"]{color:var(--accent);background:var(--soft);border-left-color:var(--accent)}.sidebar .download-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;padding:11px 14px;border:1px solid rgba(81,69,205,.25);background:linear-gradient(135deg,#5145cd,#7467ec);color:#fff;border-left:none;border-radius:12px;font-weight:700;box-shadow:0 10px 22px rgba(81,69,205,.18)}.sidebar .download-btn:hover,.sidebar .download-btn[aria-current="location"]{background:linear-gradient(135deg,#4337c4,#5e4fe7);color:#fff;border-left:none}.side-note{font-size:12px;color:var(--muted);margin:30px 12px;padding-top:18px;border-top:1px solid var(--line)}.downloads-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px;margin-top:22px}.download-card{background:#eef0f5;border:1px solid #dfe3ee;border-radius:18px;padding:22px 20px;min-height:170px;display:flex;flex-direction:column;justify-content:flex-start}.download-card h3{margin:0 0 14px;font-size:22px;line-height:1.2;color:var(--ink)}.download-card p{margin:0 0 16px;font-size:16px;line-height:1.5;color:var(--ink)}.download-card a{display:inline-block;font-size:16px;font-weight:500;color:#4d4fc9;text-decoration:none}.download-card a:hover{text-decoration:underline}.download-card:nth-child(3){grid-column:1 / 2}.main{min-width:0}.hero{background:linear-gradient(120deg,#ece9ff,#f2f5ff 65%,#e5f6f3);border:1px solid #dcdff0;border-radius:24px;padding:40px;margin-bottom:30px;position:relative;overflow:hidden}.hero .eyebrow{color:var(--accent)}h1{font-size:clamp(32px,4.5vw,50px);line-height:1.13;letter-spacing:-1.8px;max-width:600px;margin:18px 0}h2{font-size:24px;line-height:1.3;letter-spacing:-.5px;margin:0 0 18px}h3{font-size:16px;line-height:1.4;margin:0 0 9px}p{margin:0 0 16px}.hero p{max-width:560px;color:var(--muted);font-size:16px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.tag{font-size:12px;font-weight:650;background:#ffffffbd;border:1px solid #d9dded;padding:5px 11px;border-radius:30px}.section{padding:30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);margin:20px 0}.section-number{color:var(--accent);font-size:12px;letter-spacing:1px;font-weight:750;display:block;margin-bottom:9px}.section p,.section li{color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.card{padding:20px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}.card p{font-size:14px;margin:0}.steps{list-style:none;margin:12px 0 0;padding:0;counter-reset:step}.steps li{counter-increment:step;position:relative;padding:0 0 23px 49px}.steps li:last-child{padding-bottom:0}.steps li:before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:1px;background:var(--soft);color:var(--accent);font-weight:750;font-size:12px;border-radius:10px;width:33px;height:33px;display:grid;place-items:center}.steps strong{color:var(--ink);display:block}.note{border-left:3px solid var(--accent);background:var(--soft);padding:16px 19px;border-radius:0 10px 10px 0;font-size:14px;margin-top:20px}.note p{margin:0;color:#40396d}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th{text-align:left;color:var(--ink);background:var(--bg)}th,td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}td{color:var(--muted)}code{font-size:.88em;background:#eeeff6;padding:3px 5px;border-radius:5px;color:#473c9f;overflow-wrap:anywhere}.architecture{display:grid;gap:10px;margin:20px 0}.layer{display:flex;gap:20px;align-items:baseline;background:var(--bg);padding:15px 18px;border:1px solid var(--line);border-radius:12px}.layer b{min-width:100px;font-size:14px}.layer span{color:var(--muted);font-size:14px}details{border-top:1px solid var(--line);padding:17px 0}details:last-child{padding-bottom:0}summary{font-weight:650;cursor:pointer}details p{margin:13px 0 0;font-size:14px}ul{padding-left:22px}.footer{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);padding-top:20px;margin-top:30px}.print{border:0;background:none;color:var(--accent);font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:4px}
+    @media(max-width:850px){.layout{grid-template-columns:1fr;gap:20px;padding-top:24px}.sidebar{position:static}.sidebar nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.sidebar a{padding:6px 10px;font-size:12px}.side-note{display:none}.hero{padding:28px}.section{padding:25px}}
+    @media(max-width:500px){.topbar-inner{padding:13px 18px}.layout{padding:20px 16px 40px}.brand{font-size:16px}.back{font-size:12px}.hero{padding:25px 22px}.section{padding:23px 20px}.grid{grid-template-columns:1fr}.layer{display:block}.layer b{display:block;margin-bottom:4px}.footer{flex-direction:column}.section h2{font-size:22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{.topbar,.sidebar,.print,.skip{display:none}.layout{display:block;padding:0;max-width:none}body{background:white;font-size:11pt}.hero{background:white;padding:20px;border:1px solid #bbb}h1{font-size:28pt}.section{padding:18px;margin:15px 0;border-color:#bbb}.card,.layer,details{break-inside:avoid}.section h2{break-after:avoid}.footer{display:block}a{color:inherit}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar"><div class="topbar-inner"><div class="brand"><span class="mark" aria-hidden="true">QL</span>Quiz Libras</div><a class="back" href="/">← Voltar a pagina inicial</a></div></header>
+  <div class="layout">
+    <aside class="sidebar"><div class="nav-label">Documentação do projeto</div><nav aria-label="Seções da documentação">
+      <a href="#visao-geral">Visão geral</a><a href="#objetivos">Objetivos</a><a href="#funcionamento">Como funciona</a><a href="#ia">Inteligência artificial</a><a href="#arquitetura">Arquitetura</a><a href="#tecnologias">Tecnologias</a><a href="#limites">Limitações</a><a href="#perguntas">Perguntas frequentes</a>
+      <a href="#downloads" class="download-btn" aria-label="Ir para downloads">⬇ Downloads</a>
+    </nav><p class="side-note">Um projeto educacional que aproxima visão computacional e prática do alfabeto manual.</p></aside>
+    <main id="conteudo">
+      <div class="hero"><div class="eyebrow">Tecnologia a serviço do aprendizado</div><h1>Conheça o projeto<br>Quiz Libras.</h1><p>Uma aplicação web que reúne atividades de quiz e reconhecimento de imagens para apoiar a prática de letras representadas no alfabeto manual da Libras.</p><div class="tags"><span class="tag">Visão computacional</span><span class="tag">Inteligência artificial</span><span class="tag">Educação</span></div></div>
+      <section class="section" id="visao-geral"><span class="section-number">01 / O PROJETO</span><h2>Aprender, praticar e explorar.</h2><p>O Quiz Libras é uma proposta educacional que combina uma interface interativa com um modelo de inteligência artificial. O trabalho explora como o reconhecimento de padrões em imagens pode ser aplicado a atividades envolvendo o alfabeto manual.</p><p>A aplicação integra uma página web a um servidor Python. Nesse servidor, o modelo treinado pode analisar uma imagem e indicar a classe prevista, permitindo apresentar o resultado ao usuário.</p><div class="note"><p>O reconhecimento de letras em imagens é um recorte do projeto. A Libras possui estrutura linguística própria, expressões faciais e movimentos; o quiz não representa um tradutor completo da língua.</p></div></section>
+      <section class="section" id="objetivos"><span class="section-number">02 / PROPÓSITO</span><h2>Objetivos do trabalho</h2><p>Explorar a integração entre visão computacional e uma aplicação web voltada à prática do alfabeto manual.</p><div class="grid"><article class="card"><h3>Apoiar a prática</h3><p>Oferecer atividades visuais que ajudem o usuário a associar representações de mãos às letras abordadas.</p></article><article class="card"><h3>Aplicar inteligência artificial</h3><p>Utilizar um modelo de classificação para reconhecer padrões nas imagens das classes treinadas.</p></article><article class="card"><h3>Integrar as tecnologias</h3><p>Conectar a interface do navegador ao processamento realizado pelo backend em Python.</p></article><article class="card"><h3>Compreender as limitações</h3><p>Observar como as condições das imagens influenciam os acertos e os erros do reconhecimento.</p></article></div></section>
+      <section class="section" id="funcionamento"><span class="section-number">03 / EXPERIÊNCIA</span><h2>Da imagem ao resultado</h2><p>O fluxo conceitual de reconhecimento envolve cinco etapas:</p><ol class="steps"><li><strong>Entrada da imagem</strong>A aplicação recebe a imagem a ser analisada na atividade.</li><li><strong>Preparação dos dados</strong>A imagem deve receber o mesmo tratamento utilizado no treinamento, incluindo tamanho e escala dos valores.</li><li><strong>Análise pelo modelo</strong>A rede neural calcula uma saída para as classes que aprendeu a distinguir.</li><li><strong>Identificação da classe</strong>A previsão é associada ao nome da classe, respeitando a ordem dos rótulos do treinamento.</li><li><strong>Exibição na interface</strong>O resultado retorna à aplicação web para apresentação ao usuário.</li></ol></section>
+      <section class="section" id="ia"><span class="section-number">04 / RECONHECIMENTO</span><h2>O papel da inteligência artificial</h2><p>Um classificador de imagens aprende padrões a partir de exemplos rotulados. Durante o treinamento, seus parâmetros são ajustados para relacionar as características visuais das imagens às classes correspondentes.</p><p>Depois dessa etapa, o modelo salvo em <code>modelo_libras.keras</code> pode ser carregado para realizar novas previsões. O arquivo <code>classes.npy</code> mantém os rótulos necessários para transformar a saída numérica em uma classe compreensível.</p><div class="grid"><article class="card"><h3>Treinamento</h3><p>Etapa de aprendizagem com exemplos. É realizada antes do uso do modelo na aplicação.</p></article><article class="card"><h3>Inferência</h3><p>Etapa de previsão sobre uma imagem. Utiliza os parâmetros já aprendidos pelo modelo.</p></article></div><div class="note"><p>Uma previsão pode estar incorreta. Mesmo uma pontuação alta do modelo não garante que a imagem tenha sido reconhecida corretamente.</p></div></section>
+      <section class="section" id="arquitetura"><span class="section-number">05 / ORGANIZAÇÃO</span><h2>Arquitetura da aplicação</h2><p>A estrutura informada para o projeto reúne três partes: a interface, o servidor Flask e os arquivos do modelo.</p><div class="architecture"><div class="layer"><b>Interface</b><span>HTML, CSS e JavaScript apresentam o quiz e recebem as interações.</span></div><div class="layer"><b>Servidor</b><span>O Flask conecta as páginas e as requisições ao processamento em Python.</span></div><div class="layer"><b>Modelo</b><span>O arquivo Keras e a lista de classes permitem interpretar as imagens.</span></div></div><div class="table-wrap"><table><caption style="text-align:left;font-weight:650;margin-bottom:12px">Arquivos e responsabilidades</caption><thead><tr><th scope="col">Caminho</th><th scope="col">Responsabilidade</th></tr></thead><tbody><tr><td><code>app.py</code></td><td>Ponto de entrada do backend, com rotas e integração do modelo.</td></tr><tr><td><code>modelo_libras.keras</code></td><td>Modelo treinado utilizado nas previsões.</td></tr><tr><td><code>classes.npy</code></td><td>Rótulos das classes associados às saídas do modelo.</td></tr><tr><td><code>requirements.txt</code></td><td>Dependências Python do projeto.</td></tr><tr><td><code>templates/index.html</code></td><td>Página principal do quiz.</td></tr><tr><td><code>templates/documentacao.html</code></td><td>Esta página de apresentação e documentação.</td></tr><tr><td><code>static/style.css</code></td><td>Estilos da interface principal.</td></tr><tr><td><code>static/script.js</code></td><td>Comportamento e interações da interface principal.</td></tr><tr><td><code>static/assets/</code></td><td>Imagens e recursos visuais.</td></tr></tbody></table></div></section>
+      <section class="section" id="tecnologias"><span class="section-number">06 / FERRAMENTAS</span><h2>Tecnologias e suas funções</h2><div class="grid"><article class="card"><h3>Python + Flask</h3><p>Processamento no servidor, definição de rotas e entrega das páginas HTML.</p></article><article class="card"><h3>TensorFlow / Keras</h3><p>Ferramentas de aprendizado profundo para construção e utilização do modelo.</p></article><article class="card"><h3>NumPy</h3><p>Manipulação de dados numéricos e leitura de arquivos no formato NPY.</p></article><article class="card"><h3>HTML, CSS e JavaScript</h3><p>Estrutura, apresentação visual e interatividade da aplicação no navegador.</p></article></div></section>
+      <section class="section" id="limites"><span class="section-number">07 / ANÁLISE CRÍTICA</span><h2>Limitações e possibilidades</h2><p>O desempenho depende da relação entre as imagens usadas no treinamento e aquelas analisadas durante o uso. Variações de iluminação, fundo, enquadramento e posição das mãos podem provocar erros.</p><ul><li><strong>Classes conhecidas:</strong> o modelo reconhece apenas as categorias contempladas no treinamento.</li><li><strong>Condições de captura:</strong> imagens muito diferentes dos exemplos de treinamento podem reduzir a qualidade das previsões.</li><li><strong>Imagens estáticas:</strong> uma imagem isolada não descreve toda a informação de sinais que dependem de movimento.</li><li><strong>Avaliação:</strong> conclusões sobre desempenho devem ser apoiadas por testes com imagens separadas do treinamento.</li></ul><p>Como possibilidades de evolução, podem ser exploradas a ampliação e a diversificação das imagens, melhorias no pré-processamento e avaliações com novos usuários e condições de captura.</p><div class="note"><p>Esta documentação não apresenta valores de acurácia ou resultados quantitativos: essas informações devem ser incluídas a partir da avaliação efetivamente realizada no projeto.</p></div></section>
+      <section class="section" id="perguntas"><span class="section-number">08 / DÚVIDAS</span><h2>Perguntas frequentes</h2><details><summary>O quiz ensina Libras por completo?</summary><p>Não. A proposta é apoiar a prática de representações do alfabeto manual. O aprendizado de Libras envolve também vocabulário, gramática, expressões e interação com a comunidade surda.</p></details><details><summary>O modelo aprende a cada imagem enviada?</summary><p>A inferência utiliza um modelo já treinado. Enviar uma imagem para classificação, por si só, não modifica os parâmetros desse modelo.</p></details><details><summary>Por que imagens parecidas podem ter resultados diferentes?</summary><p>Mudanças no fundo, na iluminação, no ângulo ou no enquadramento alteram os dados de entrada. O modelo pode ser sensível a essas diferenças.</p></details><details><summary>Como avaliar a qualidade do reconhecimento?</summary><p>Com um conjunto de teste separado do treinamento. Acurácia, precisão, revocação, F1 e matriz de confusão ajudam a compreender tanto o desempenho geral quanto os erros entre classes.</p></details></section>
+      <section id="downloads" class="section">
+          <span class="section-number">09 / DOWNLOADS</span>
+          <h2>Arquivos do projeto</h2>
+
+          <p>
+              Baixe os materiais utilizados no desenvolvimento do Quiz Libras.
+          </p>
+
+          <div class="downloads-grid">
+              <article class="download-card">
+                  <h3>Código-fonte</h3>
+                  <p>Aplicação Flask, páginas HTML, estilos e scripts.</p>
+                  <a href="{{ url_for('static', filename='downloads/quiz-libras-codigo.zip') }}" download>
+                      Baixar código (zip)
+                  </a>
+              </article>
+
+              <article class="download-card">
+                  <h3>Modelo treinado</h3>
+                  <p>Modelo de inteligência artificial utilizado no reconhecimento.</p>
+                  <a href="{{ url_for('static', filename='downloads/modelo_libras.keras') }}" download>
+                      Baixar modelo (.keras)
+                  </a>
+              </article>
+
+              <article class="download-card">
+                  <h3>Classes do modelo</h3>
+                  <p>Arquivo com os rótulos das classes reconhecidas.</p>
+                  <a href="{{ url_for('static', filename='downloads/classes.npy') }}" download>
+                      Baixar classes (.npy)
+                  </a>
+              </article>
+          </div>
+      </section>
+      <footer class="footer"><span>Quiz Libras · Documentação e apresentação do projeto</span><button type="button" class="print" id="imprimir">Imprimir / salvar em PDF</button></footer>
+
+    </main>
+  </div>
+  <script>
+    document.getElementById('imprimir').addEventListener('click', function () { window.print(); });
+    // Realça a seção mais próxima do início da área visível.
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const links = Array.from(document.querySelectorAll('.sidebar nav a'));
+    let scheduled = false;
+    function updateNavigation() {
+      let current = sections[0].id;
+      sections.forEach(function (section) { if (section.getBoundingClientRect().top <= 160) current = section.id; });
+      links.forEach(function (link) { if (link.getAttribute('href') === '#' + current) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+      scheduled = false;
+    }
+    window.addEventListener('scroll', function () { if (!scheduled) { scheduled = true; window.requestAnimationFrame(updateNavigation); } }, { passive: true });
+    updateNavigation();
+    // Expande as respostas na impressão e restaura seu estado em seguida.
+    let openStates = [];
+    window.addEventListener('beforeprint', function () { openStates = Array.from(document.querySelectorAll('details'), function (detail) { const state = detail.open; detail.open = true; return state; }); });
+    window.addEventListener('afterprint', function () { document.querySelectorAll('details').forEach(function (detail, index) { detail.open = openStates[index] || false; }); });
+  </script>
+</body>
+</html>
