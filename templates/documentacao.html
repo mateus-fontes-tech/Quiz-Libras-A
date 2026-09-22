@@ -47,37 +47,9 @@
       <section class="section" id="perguntas"><span class="section-number">08 / DÚVIDAS</span><h2>Perguntas frequentes</h2><details><summary>O quiz ensina Libras por completo?</summary><p>Não. A proposta é apoiar a prática de representações do alfabeto manual. O aprendizado de Libras envolve também vocabulário, gramática, expressões e interação com a comunidade surda.</p></details><details><summary>O modelo aprende a cada imagem enviada?</summary><p>A inferência utiliza um modelo já treinado. Enviar uma imagem para classificação, por si só, não modifica os parâmetros desse modelo.</p></details><details><summary>Por que imagens parecidas podem ter resultados diferentes?</summary><p>Mudanças no fundo, na iluminação, no ângulo ou no enquadramento alteram os dados de entrada. O modelo pode ser sensível a essas diferenças.</p></details><details><summary>Como avaliar a qualidade do reconhecimento?</summary><p>Com um conjunto de teste separado do treinamento. Acurácia, precisão, revocação, F1 e matriz de confusão ajudam a compreender tanto o desempenho geral quanto os erros entre classes.</p></details></section>
       <section id="downloads" class="section">
           <span class="section-number">09 / DOWNLOADS</span>
-          <h2>Arquivos do projeto</h2>
-
-          <p>
-              Baixe os materiais utilizados no desenvolvimento do Quiz Libras.
-          </p>
-
-          <div class="downloads-grid">
-              <article class="download-card">
-                  <h3>Código-fonte</h3>
-                  <p>Aplicação Flask, páginas HTML, estilos e scripts.</p>
-                  <a href="{{ url_for('static', filename='downloads/quiz-libras-codigo.zip') }}" download>
-                      Baixar código (zip)
-                  </a>
-              </article>
-
-              <article class="download-card">
-                  <h3>Modelo treinado</h3>
-                  <p>Modelo de inteligência artificial utilizado no reconhecimento.</p>
-                  <a href="{{ url_for('static', filename='downloads/modelo_libras.keras') }}" download>
-                      Baixar modelo (.keras)
-                  </a>
-              </article>
-
-              <article class="download-card">
-                  <h3>Classes do modelo</h3>
-                  <p>Arquivo com os rótulos das classes reconhecidas.</p>
-                  <a href="{{ url_for('static', filename='downloads/classes.npy') }}" download>
-                      Baixar classes (.npy)
-                  </a>
-              </article>
-          </div>
+          <h2>Repositório do projeto</h2>
+          <p>Acesse o repositório do Quiz Libras no GitHub para consultar o código-fonte e os arquivos do projeto.</p>
+          <a href="https://github.com/mateus-fontes-tech/Quiz-Libras-A" target="_blank" rel="noopener noreferrer" style="overflow-wrap:anywhere">https://github.com/mateus-fontes-tech/Quiz-Libras-A</a>
       </section>
       <footer class="footer"><span>Quiz Libras · Documentação e apresentação do projeto</span><button type="button" class="print" id="imprimir">Imprimir / salvar em PDF</button></footer>
 

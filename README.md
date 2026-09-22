@@ -1,6 +1,8 @@
-# Treinamento da IA para o Quiz Libras
+# Quiz Libras
 
-Documentação técnica baseada no arquivo `Código colado(8).py` fornecido pelo autor. Descreve a implementação enviada; o treinamento não foi executado para produzir este documento e não foram fornecidos resultados numéricos.
+Aplicação web para reconhecimento de sinais do alfabeto em Libras por meio de inteligência artificial e câmera.
+
+Documentação técnica baseada no arquivo `train_libras.py` fornecido pelo autor. Descreve a implementação enviada; o treinamento não foi executado para produzir este documento e não foram fornecidos resultados numéricos.
 
 ## 1. Finalidade
 
@@ -223,5 +225,5 @@ Esta integração descreve o contrato de entrada e saída necessário. O arquivo
 O processamento inicia com a leitura de imagens organizadas em diretórios por classe. As imagens válidas são convertidas de BGR para RGB, redimensionadas para 128 × 128 pixels e normalizadas pela divisão dos valores por 255. Os dados são separados de forma estratificada em aproximadamente 70% para treinamento, 15% para validação e 15% para teste. Durante o treinamento, são aplicadas transformações de rotação, deslocamento, zoom, brilho e cisalhamento. A arquitetura utiliza quatro blocos convolucionais com 32, 64, 128 e 256 filtros, seguidos de agregação global por média e camadas densas. O treinamento emprega Adam, taxa inicial de 0,0001, lotes de 32 imagens e limite de 60 épocas, com parada antecipada, redução da taxa de aprendizagem e salvamento do melhor modelo segundo a acurácia de validação. A etapa final prevê avaliação por acurácia, relatório de classificação e matriz de confusão no conjunto de teste, seguida da gravação do modelo e dos rótulos das classes.
 
 Este resumo descreve o procedimento implementado; resultados e conclusões experimentais dependem dos registros da execução.
-#   Q u i z - L i b r a s  
- 
+# Quiz-Libras
+
